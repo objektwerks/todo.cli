@@ -2,12 +2,6 @@ Todo CLI
 --------
 Todo command line app using MainArgs, Os-lib, uPickle and Scala 3.
 
-Commands
---------
-1. list - sbt "run list"
-2. add todo - sbt "run add --todo drink beer"
-3. completed id - sbt "run completed --id 1"
-
 Build
 -----
 1. sbt clean compile
@@ -23,6 +17,12 @@ Run
 Assembly
 --------
 1. sbt clean test assembly
+
+Commands
+--------
+1. list - sbt "run list"
+2. add todo - sbt "run add --todo drink beer"
+3. completed id - sbt "run completed --id 1"
 
 Execute
 -------
