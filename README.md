@@ -18,7 +18,7 @@ Run
 
 Assembly
 --------
-1. sbt clean test assembly
+1. sbt clean compile assembly
 
 Execute
 -------
