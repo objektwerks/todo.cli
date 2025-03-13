@@ -1,6 +1,6 @@
 Todo CLI
 --------
-Todo command line app.
+Todo command line app MainArgs, Os-lib, uPickle and Scala 3.
 
 Commands
 --------
