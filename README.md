@@ -26,7 +26,7 @@ Commands
 >The command ```list --state``` accepts ```all``` ( the default ), ```completed``` and ```incomplete```
 * ```list --state``` all | completed | incomplete
 >Since the default is: --state all, this also works:
-* ```list - sbt "run list"```
+* ```list```
 
 Execute
 -------
