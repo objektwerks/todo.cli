@@ -20,12 +20,12 @@ Assembly
 
 Commands
 --------
-1. list - ```sbt "run list --state all"```
-2. add todo - ```sbt "run add --todo drink beer"```
-3. complete id - ```sbt "run complete --id 1"```
+1. list --state : ```sbt "run list --state all"```
+2. add --todo : ```sbt "run add --todo drink beer"```
+3. complete --id : ```sbt "run complete --id 1"```
 >The command ```list --state``` accepts ```all``` ( the default ), ```completed``` and ```incomplete```
-* ```list --state``` all | completed | incomplete
->Since the default is: --state all, this also works:
+* ```list --state all | completed | incomplete```
+>Since the default is: ```--state all```, this also works:
 * ```list```
 
 Execute
