@@ -17,7 +17,7 @@ object App extends LazyLogging:
 
   @main
   def completed( @arg(short = 'd', doc = "Completed todo by id.") id: Int): Unit =
-    log(s"todo completed: $id")
+    log(s"completed todo: $id")
 
   def main(args: Array[String]): Unit =
     ParserForMethods(this).runOrExit(args)
