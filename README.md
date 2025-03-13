@@ -33,3 +33,7 @@ Execute
 1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.2-SNAPSHOT.jar list --state all```
 2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.2-SNAPSHOT.jar add --todo drink beer```
 3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.2-SNAPSHOT.jar complete --id 1```
+
+Resources
+---------
+* [MainArgs Github](https://github.com/com-lihaoyi/mainargs?tab=readme-ov-file#varargs-parameters)
