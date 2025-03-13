@@ -1,6 +1,6 @@
 Todo CLI
 --------
-Todo cli app.
+Todo command line app.
 
 Commands
 --------
