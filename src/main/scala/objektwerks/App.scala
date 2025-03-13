@@ -2,11 +2,13 @@ package objektwerks
 
 import com.typesafe.scalalogging.LazyLogging
 
+import mainargs.{main, arg, ParserForMethods}
+
 object App extends LazyLogging:
   val store = Store()
 
   @main
-  def list(): Unit =
+  def list( @arg(short = 'l', doc = "List todos.") dummy: Int = 0 ): Unit =
     log("list todos")
 
   @main
@@ -17,6 +19,9 @@ object App extends LazyLogging:
   def completed(id: Int): Unit =
     log(s"todo completed: $id")
 
-  def log(message: String): Unit =
+  def main(args: Array[String]): Unit =
+    ParserForMethods(this).runOrExit(args)
+
+  private def log(message: String): Unit =
     println(message)
     logger.info(message)
