@@ -22,4 +22,4 @@ Assembly
 
 Execute
 -------
-1. java -jar ./target/todo-cli-$version.jar ( or double-click executable jar )
+1. java -jar target/scala-3.6.4/todo-cli-0.1-SNAPSHOT.jar ( or double-click executable jar )
