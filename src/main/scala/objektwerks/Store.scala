@@ -12,7 +12,7 @@ final class Store extends LazyLogging:
   os.makeDir.all(todosPath)
   logger.info("Initialized store.")
 
-  def listTodos: List[Todo] =
+  def listTodos(): List[Todo] =
     logger.info(s"List todos.")
     os.list(todosPath)
       .filter { path => path.baseName.nonEmpty }

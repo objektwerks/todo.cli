@@ -9,4 +9,4 @@ class StoreTest extends AnyFunSuite with Matchers:
     val todo = Todo.default()    
     store.writeTodo(todo)
     store.readTodo(todo.file) shouldBe todo
-    store.listTodos.length should be >= 1
+    store.listTodos().length should be >= 1
