@@ -13,8 +13,8 @@ object App extends LazyLogging:
     val todos = store.listTodos()
     state match
       case State.all => todos.foreach(println)
-      case State.completed => todos.map(todo => todo.completed.nonEmpty).foreach(println)
-      case State.incomplete => todos.map(todo => todo.completed.isEmpty).foreach(println)
+      case State.completed => todos.filter(todo => todo.completed.nonEmpty).foreach(println)
+      case State.incomplete => todos.filter(todo => todo.completed.isEmpty).foreach(println)
 
   @main
   def add( @arg(doc = "Add todo.") todo: String* ): Unit =
