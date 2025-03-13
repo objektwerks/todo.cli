@@ -4,17 +4,25 @@ import com.typesafe.scalalogging.LazyLogging
 
 import os.Path
 
-import ox.*
-
 import upickle.default.{read => readJson, write => writeJson}
 
-import scalafx.application.Platform
-
 final class Store extends LazyLogging:
-  os.makeDir.all( buildRecipesPath )
+  os.makeDir.all( buildTodoPath )
 
-  private val recipesPath = buildRecipesPath
+  private val todoPath = buildTodoPath
 
   logger.info("Initialized store.")
 
-  private def buildRecipesPath: Path = os.home / ".todo" / "data"
+  private def buildTodoPath: Path = os.home / ".todo"
+
+  def listTodos: List[Todo] =
+    logger.info(s"List todos.")
+    os.list(todoPath)
+      .filter { path => path.baseName.nonEmpty }
+      .map { path => readTodo(s"${path.baseName}.json") }
+      .toList
+
+  def readTodo(file: String): Todo =
+    val todoAsJson = os.read(todoPath / file)
+    logger.info(s"Read todo: $file")
+    readJson[Todo](todoAsJson)
