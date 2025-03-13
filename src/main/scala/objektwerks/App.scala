@@ -13,7 +13,7 @@ object App extends LazyLogging:
 
   @main
   def add( @arg(short = 'a', doc = "Add todo.") todo: String* ): Unit =
-    log(s"add todo: ${todo.mkString(" ")}")
+    log(s"add todo: ${todo.tail.mkString(" ")}")
 
   @main
   def completed( @arg(short = 'd', doc = "Completed todo by id.") id: Int): Unit =
