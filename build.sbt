@@ -2,7 +2,6 @@ name := "todo.cli"
 organization := "objektwerks"
 version := "0.1-SNAPSHOT"
 scalaVersion := "3.6.4"
-mainClass := Some("objektwerks.App")
 libraryDependencies ++= Seq(
   "com.lihaoyi" %% "mainargs" % "0.7.6",
   "com.lihaoyi" %% "os-lib" % "0.11.5-M3",
@@ -15,6 +14,7 @@ scalacOptions ++= Seq(
   "-Wunused:all"
 )
 assemblyJarName := s"todo-cli-${version.value}.jar"
+assembly / mainClass := Some("objektwerks.App")
 assembly / assemblyMergeStrategy := {
   case PathList("META-INF", "services", xs @ _*) => MergeStrategy.filterDistinctLines
   case x => MergeStrategy.first
