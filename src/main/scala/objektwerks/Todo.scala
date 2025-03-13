@@ -4,6 +4,11 @@ import java.time.Instant
 
 import upickle.default.ReadWriter as JsonSupport
 
+object State:
+  val all = "all"
+  val completed = "completed"
+  val incomplete = "incomplete"
+
 object Todo:
   given Ordering[Todo] = Ordering.by[Todo, String](t => t.created).reverse
 

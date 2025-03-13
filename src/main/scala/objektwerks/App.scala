@@ -7,10 +7,14 @@ import mainargs.{main, arg, ParserForMethods}
 object App extends LazyLogging:
   val store = Store()
 
-  @main(doc = "List todos.")
-  def list(): Unit =
+  @main
+  def list( @arg(doc = "List todos by state [all, completed, incomplete]") state: String = State.all ): Unit =
     log("list:")
-    store.listTodos().foreach { todo => log(todo.toString) }
+    val todos = store.listTodos()
+    state match
+      case State.all => todos.foreach(println)
+      case State.completed => todos.map(todo => todo.completed.nonEmpty).foreach(println)
+      case State.incomplete => todos.map(todo => todo.completed.isEmpty).foreach(println)
 
   @main
   def add( @arg(doc = "Add todo.") todo: String* ): Unit =
