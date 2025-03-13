@@ -11,3 +11,8 @@ libraryDependencies ++= Seq(
 scalacOptions ++= Seq(
   "-Wunused:all"
 )
+assemblyJarName := s"todo-cli-${version.value}.jar"
+assembly / assemblyMergeStrategy := {
+  case PathList("META-INF",  xs @ _*) => MergeStrategy.discard
+  case x => MergeStrategy.first
+}
