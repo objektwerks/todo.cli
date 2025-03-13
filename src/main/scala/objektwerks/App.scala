@@ -8,15 +8,15 @@ object App extends LazyLogging:
   val store = Store()
 
   @main
-  def list( @arg(short = 'l', doc = "List todos.") ignore: Int = 0 ): Unit =
+  def list( @arg(doc = "List todos.") ignore: Int = 0 ): Unit =
     log("list todos")
 
   @main
-  def add( @arg(short = 'a', doc = "Add todo.") todo: String* ): Unit =
+  def add( @arg(doc = "Add todo.") todo: String* ): Unit =
     log(s"add todo: ${todo.tail.mkString(" ")}")
 
   @main
-  def completed( @arg(short = 'd', doc = "Completed todo by id.") id: Int): Unit =
+  def completed( @arg(doc = "Completed todo by id.") id: Int): Unit =
     log(s"completed todo: $id")
 
   def main(args: Array[String]): Unit =
