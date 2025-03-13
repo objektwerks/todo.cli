@@ -20,13 +20,16 @@ Assembly
 
 Commands
 --------
-1. list - sbt "run list --state all"
-2. add todo - sbt "run add --todo drink beer"
-3. complete id - sbt "run complete --id 1"
->list --state accepts: all, completed, incomplete
+1. list - ```sbt "run list --state all"```
+2. add todo - ```sbt "run add --todo drink beer"```
+3. complete id - ```sbt "run complete --id 1"```
+>The list command --state accepts all ( the default ), completed and incomplete
+* ```list --state``` all | completed | incomplete
+>Since the default is: --state all, this also works:
+* ```list - sbt "run list"```
 
 Execute
 -------
-1. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar list --state all
-2. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar add --todo drink beer
-3. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar complete --id 1
+1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar list --state all```
+2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar add --todo drink beer```
+3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar complete --id 1```
