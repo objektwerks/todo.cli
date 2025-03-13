@@ -12,13 +12,17 @@ Build
 -----
 1. sbt clean compile
 
+Test
+----
+1. sbt clean test
+
 Run
 ---
 1. sbt "run arg1 arg2 arg3"
 
 Assembly
 --------
-1. sbt clean compile assembly
+1. sbt clean test assembly
 
 Execute
 -------
