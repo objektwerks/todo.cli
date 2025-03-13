@@ -2,20 +2,15 @@ package objektwerks
 
 import com.typesafe.scalalogging.LazyLogging
 
-import os.Path
-
 import upickle.default.{read => readJson, write => writeJson}
 
 import Todo.given
 
 final class Store extends LazyLogging:
-  os.makeDir.all( buildTodosPath() )
+  private val todosPath = os.home / ".todo" / "data"
 
-  private val todosPath = buildTodosPath()
-
+  os.makeDir.all(todosPath)
   logger.info("Initialized store.")
-
-  private def buildTodosPath(): Path = os.home / ".todo" / "data"
 
   def listTodos: List[Todo] =
     logger.info(s"List todos.")
