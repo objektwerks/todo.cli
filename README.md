@@ -19,3 +19,7 @@ Run
 Assembly
 --------
 1. sbt clean test assembly
+
+Execute
+-------
+1. java -jar ./target/todo-cli-$version.jar ( or double-click executable jar )
