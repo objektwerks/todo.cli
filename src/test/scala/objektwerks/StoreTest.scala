@@ -5,7 +5,7 @@ import org.scalatest.matchers.should.Matchers
 
 class StoreTest extends AnyFunSuite with Matchers:
   test("store"):
-    val todo = Todo.default
+    val todo = Todo.default()
     val store = Store()
     
     store.writeTodo(todo)
