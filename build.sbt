@@ -14,8 +14,8 @@ scalacOptions ++= Seq(
   "-Wunused:all"
 )
 assemblyJarName := s"todo-cli-${version.value}.jar"
-assembly / mainClass := Some("objektwerks.App")
 assembly / assemblyMergeStrategy := {
   case PathList("META-INF", "services", xs @ _*) => MergeStrategy.filterDistinctLines
+  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
 }
