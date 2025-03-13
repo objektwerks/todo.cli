@@ -26,6 +26,6 @@ Assembly
 
 Execute
 -------
-1. java -jar target/scala-3.6.4/todo-cli-0.1-SNAPSHOT.jar list
-2. java -jar target/scala-3.6.4/todo-cli-0.1-SNAPSHOT.jar add --todo drink beer
-3. java -jar target/scala-3.6.4/todo-cli-0.1-SNAPSHOT.jar completed --id 1
+1. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar list
+2. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar add --todo drink beer
+3. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar completed --id 1

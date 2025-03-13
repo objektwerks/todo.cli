@@ -8,7 +8,7 @@ object App extends LazyLogging:
   val store = Store()
 
   @main
-  def list( @arg(doc = "List todos.") ignore: Int = 0 ): Unit =
+  def list(): Unit =
     log("list todos")
 
   @main
