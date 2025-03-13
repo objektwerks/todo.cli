@@ -5,7 +5,7 @@ Todo cli app.
 Commands
 --------
 1. list - sbt "run list"
-2. add todo - sbt "run add --todo walk"
+2. add todo - sbt "run add --todo drink beer"
 3. completed id - sbt "run completed --id 1"
 
 Build
