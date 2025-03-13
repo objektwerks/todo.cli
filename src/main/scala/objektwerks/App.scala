@@ -13,6 +13,10 @@ object App extends LazyLogging:
   def add(todo: String): Unit =
     log(s"add todo: $todo")
 
+  @main
+  def completed(id: Int): Unit =
+    log(s"todo completed: $id")
+
   def log(message: String): Unit =
     println(message)
     logger.info(message)
