@@ -5,8 +5,8 @@ Todo cli app.
 Commands
 --------
 1. list
-2. add -text
-3. completed -id
+2. add todo
+3. completed id
 
 Build
 -----
