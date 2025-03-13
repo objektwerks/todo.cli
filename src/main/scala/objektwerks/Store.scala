@@ -6,6 +6,8 @@ import os.Path
 
 import upickle.default.{read => readJson, write => writeJson}
 
+import Todo.given
+
 final class Store extends LazyLogging:
   os.makeDir.all( buildTodosPath )
 
