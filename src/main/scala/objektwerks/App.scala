@@ -9,7 +9,8 @@ object App extends LazyLogging:
 
   @main
   def list(): Unit =
-    log(s"list todos: ${store.listTodos()}")
+    log("list todos:")
+    store.listTodos().foreach { todo => log(todo.toString) }
 
   @main
   def add( @arg(doc = "Add todo.") todo: String* ): Unit =
