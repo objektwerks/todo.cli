@@ -22,10 +22,10 @@ Commands
 --------
 1. list - sbt "run list"
 2. add todo - sbt "run add --todo drink beer"
-3. completed id - sbt "run completed --id 1"
+3. complete id - sbt "run complete --id 1"
 
 Execute
 -------
 1. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar list
 2. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar add --todo drink beer
-3. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar completed --id 1
+3. java -jar target/scala-3.7.0-RC1/todo-cli-0.1-SNAPSHOT.jar complete --id 1
