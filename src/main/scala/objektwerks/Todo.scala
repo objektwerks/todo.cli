@@ -13,4 +13,5 @@ object Todo:
 final case class Todo(id: Int,
                       todo: String,
                       created: String = datetime(),
-                      completed: String = "") derives CanEqual, JsonSupport
+                      completed: String = "") derives CanEqual, JsonSupport:
+  def file: String = s"$id.json"

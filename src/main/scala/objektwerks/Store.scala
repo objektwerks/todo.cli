@@ -7,22 +7,27 @@ import os.Path
 import upickle.default.{read => readJson, write => writeJson}
 
 final class Store extends LazyLogging:
-  os.makeDir.all( buildTodoPath )
+  os.makeDir.all( buildTodosPath )
 
-  private val todoPath = buildTodoPath
+  private val todosPath = buildTodosPath
 
   logger.info("Initialized store.")
 
-  private def buildTodoPath: Path = os.home / ".todo"
+  private def buildTodosPath: Path = os.home / ".todo" / "data"
 
   def listTodos: List[Todo] =
     logger.info(s"List todos.")
-    os.list(todoPath)
+    os.list(todosPath)
       .filter { path => path.baseName.nonEmpty }
       .map { path => readTodo(s"${path.baseName}.json") }
       .toList
 
   def readTodo(file: String): Todo =
-    val todoAsJson = os.read(todoPath / file)
+    val todoAsJson = os.read(todosPath / file)
     logger.info(s"Read todo: $file")
     readJson[Todo](todoAsJson)
+
+  def writeTodo(todo: Todo): Unit =
+    val todoAsJson = writeJson(todo)
+    os.write.over(todosPath / todo.file, todoAsJson)
+    logger.info(s"Write todo: ${todo.id}")
