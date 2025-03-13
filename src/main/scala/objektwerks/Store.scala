@@ -30,10 +30,10 @@ final class Store extends LazyLogging:
     logger.info(s"Write todo: ${todo.id}")
 
   def nextId(): Int =
-    val id = os.list(todosPath)
+    val list = os.list(todosPath)
       .filter { path => path.baseName.nonEmpty }
       .map { path => path.baseName.toInt }
       .toList
-      .max + 1
+    val id = if list.isEmpty then 1 else list.max + 1
     logger.info(s"Next id: $id")
     id
