@@ -2,12 +2,15 @@ package objektwerks
 
 import java.time.Instant
 
+import upickle.default.ReadWriter as JsonSupport
+
 object Todo:
   given Ordering[Todo] = Ordering.by[Todo, String](t => t.created).reverse
 
   def datetime(): String = Instant.now.toString
 
+@upickle.implicits.serializeDefaults(true)
 final case class Todo(id: Int,
                       todo: String,
                       created: String = datetime(),
-                      completed: String = "")
+                      completed: String = "") derives CanEqual, JsonSupport
