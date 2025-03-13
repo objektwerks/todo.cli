@@ -7,7 +7,7 @@ import mainargs.{main, arg, ParserForMethods}
 object App extends LazyLogging:
   val store = Store()
 
-  @main
+  @main(doc = "List todos.")
   def list(): Unit =
     log("list")
     store.listTodos().foreach { todo => log(todo.toString) }
