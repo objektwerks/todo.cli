@@ -19,7 +19,9 @@ object App extends LazyLogging:
 
   @main
   def completed( @arg(doc = "Completed todo by id.") id: Int): Unit =
-    log(s"completed todo: $id")
+    val todo = store.readTodo(s"$id.json")
+    store.writeTodo(todo.copy(completed = Todo.datetime()))
+    log(s"completed todo: $todo")
 
   def main(args: Array[String]): Unit =
     ParserForMethods(this).runOrExit(args)
