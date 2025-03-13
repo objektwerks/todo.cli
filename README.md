@@ -18,7 +18,7 @@ Test
 
 Run
 ---
-1. sbt "run arg1 arg2 arg3"
+1. sbt "run list"
 
 Assembly
 --------
