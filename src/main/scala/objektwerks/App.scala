@@ -9,7 +9,7 @@ object App extends LazyLogging:
 
   @main
   def list( @arg(doc = "List todos by state [all, completed, incomplete]") state: String = State.all ): Unit =
-    log("list:")
+    log(s"list by state: $state")
     val todos = store.listTodos()
     state match
       case State.all => todos.foreach(println)
