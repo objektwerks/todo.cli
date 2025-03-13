@@ -13,7 +13,9 @@ object App extends LazyLogging:
 
   @main
   def add( @arg(doc = "Add todo.") todo: String* ): Unit =
-    log(s"add todo: ${todo.tail.mkString(" ")}")
+    val newTodo = Todo(id = store.nextId(), todo = todo.tail.mkString(" "))
+    store.writeTodo(newTodo)
+    log(s"add todo: $newTodo")
 
   @main
   def completed( @arg(doc = "Completed todo by id.") id: Int): Unit =

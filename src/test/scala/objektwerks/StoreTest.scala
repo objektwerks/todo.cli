@@ -10,3 +10,4 @@ class StoreTest extends AnyFunSuite with Matchers:
     store.writeTodo(todo)
     store.readTodo(todo.file) shouldBe todo
     store.listTodos().length should be >= 1
+    store.nextId() should be > 1

@@ -28,3 +28,12 @@ final class Store extends LazyLogging:
     val todoAsJson = writeJson(todo)
     os.write.over(todosPath / todo.file, todoAsJson)
     logger.info(s"Write todo: ${todo.id}")
+
+  def nextId(): Int =
+    val id = os.list(todosPath)
+      .filter { path => path.baseName.nonEmpty }
+      .map { path => path.baseName.toInt }
+      .toList
+      .max + 1
+    logger.info(s"Next id: $id")
+    id
