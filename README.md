@@ -1,2 +1,3 @@
-# todo.cli
+Todo CLI
+--------
 Todo cli app.
