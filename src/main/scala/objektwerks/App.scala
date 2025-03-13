@@ -8,11 +8,11 @@ object App extends LazyLogging:
   val store = Store()
 
   @main
-  def list( @arg(short = 'l', doc = "List todos.") dummy: Int = 0 ): Unit =
+  def list( @arg(short = 'l', doc = "List todos.") ignore: Int = 0 ): Unit =
     log("list todos")
 
   @main
-  def add(todo: String): Unit =
+  def add( @arg(short = 'a', doc = "Add todo.") todo: String ): Unit =
     log(s"add todo: $todo")
 
   @main
