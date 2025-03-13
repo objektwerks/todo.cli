@@ -1,1 +1,1 @@
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.18.1")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.15.0")
