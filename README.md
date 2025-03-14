@@ -20,17 +20,17 @@ Assembly
 
 Commands
 --------
-1. list --state : ```sbt "run list --state all"```
+1. list --filter : ```sbt "run list --filter all"```
 2. add --todo : ```sbt "run add --todo drink beer"```
 3. complete --id : ```sbt "run complete --id 1"```
->The command ```list --state``` accepts ```all``` ( the default ), ```completed``` and ```incomplete```
-* ```list --state all | completed | incomplete```
->Since the default is: ```--state all```, this also works:
+>The command ```list --filter``` accepts ```all``` ( the default ), ```completed``` and ```incomplete```
+* ```list --filter all | completed | incomplete```
+>Since the default is: ```--filter all```, this also works:
 * ```list```
 
 Execute
 -------
-1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.2-SNAPSHOT.jar list --state all```
+1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.2-SNAPSHOT.jar list --filter all```
 2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.2-SNAPSHOT.jar add --todo drink beer```
 3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.2-SNAPSHOT.jar complete --id 1```
 
