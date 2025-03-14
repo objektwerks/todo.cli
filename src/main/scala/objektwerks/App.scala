@@ -39,6 +39,7 @@ object App extends LazyLogging:
     log("1. list --filter all | completed | incomplete")
     log("2. add --todo")
     log("3. complete --id")
+    log("*** To view app menu, invoke app with no command.")
 
   private def log(message: String): Unit =
     println(message)
