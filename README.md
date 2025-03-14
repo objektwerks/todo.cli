@@ -34,11 +34,11 @@ Run
 
 Execute
 -------
-1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.6-SNAPSHOT.jar list --filter all```
-2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.6-SNAPSHOT.jar add --todo drink beer```
-3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.6-SNAPSHOT.jar complete --id 1```
-4. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.6-SNAPSHOT.jar help```
->```java -jar target/scala-3.7.0-RC1/todo-cli-0.6-SNAPSHOT.jar``` also displays the help menu.
+1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar list --filter all```
+2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar add --todo drink beer```
+3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar complete --id 1```
+4. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar help```
+>```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar``` also displays the help menu.
 
 Resources
 ---------
