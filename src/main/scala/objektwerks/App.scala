@@ -40,10 +40,10 @@ object App extends LazyLogging:
 
   private def menu(): Unit =
     log("menu:")
-    log("1. help")
-    log("2. list --filter all | completed | incomplete")
-    log("3. add --todo")
-    log("4. complete --id")
+    log("1. list --filter all | completed | incomplete")
+    log("2. add --todo")
+    log("3. complete --id")
+    log("4. help")
 
   private def log(message: String): Unit =
     println(message)
