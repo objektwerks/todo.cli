@@ -35,9 +35,9 @@ object App extends LazyLogging:
 
   private def menu(): Unit =
     log("menu:")
-    log("list --filter all | completed | incomplete`")
-    log("add --todo")
-    log("complete --id")
+    log("1. list --filter all | completed | incomplete`")
+    log("2. add --todo")
+    log("3. complete --id")
 
   private def log(message: String): Unit =
     println(message)
