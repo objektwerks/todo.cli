@@ -24,8 +24,8 @@ Commands
 >Since the ```list``` default is: ```--filter all```, this also works:
 * ```list```
 
-Sbt Run
--------
+Run
+---
 1. ```sbt "run list --filter all"```
 2. ```sbt "run add --todo drink beer"```
 3. ```sbt "run complete --id 1"```
