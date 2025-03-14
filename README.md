@@ -30,7 +30,7 @@ Run
 2. ```sbt "run add --todo drink beer"```
 3. ```sbt "run complete --id 1"```
 4. ```sbt "run help"```
->```sbt run``` also displays the help menu.
+>```sbt run``` displays the help menu.
 
 Execute
 -------
@@ -38,7 +38,7 @@ Execute
 2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar add --todo Eat sushi!```
 3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar complete --id 1```
 4. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar help```
->```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar``` also displays the help menu.
+>```java -jar target/scala-3.7.0-RC1/todo-cli-0.7-SNAPSHOT.jar``` displays the help menu.
 
 Resources
 ---------
