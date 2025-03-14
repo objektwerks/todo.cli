@@ -8,7 +8,7 @@ object App extends LazyLogging:
   val store = Store()
 
   @main
-  def list( @arg(doc = "List todos by filter [all, completed, incomplete]") filter: String = Filter.all ): Unit =
+  def list( @arg filter: String = Filter.all ): Unit =
     log(s"list by filter: $filter")
     val todos = store.listTodos()
     filter match
@@ -18,13 +18,13 @@ object App extends LazyLogging:
       case _ => log("list --filter all | completed | incomplete")
 
   @main
-  def add( @arg(doc = "Add todo.") todo: String* ): Unit =
+  def add( @arg todo: String* ): Unit =
     val newTodo = Todo(id = store.nextId(), todo = todo.tail.mkString(" "))
     store.writeTodo(newTodo)
     log(s"add --todo: $newTodo")
 
   @main
-  def complete( @arg(doc = "Complete todo by id.") id: Int): Unit =
+  def complete( @arg id: Int): Unit =
     val todo = store.readTodo(s"$id.json")
     val completedTodo = todo.copy(completed = Todo.datetime())
     store.writeTodo(completedTodo)
