@@ -3,7 +3,6 @@
     <timestamp key="timestamp" datePattern="yyyyMMdd'T'HHmmss"/>
     <appender name="file" class="ch.qos.logback.core.FileAppender">
         <file>${HOME}/.todo/logs/log.${timestamp}.txt</file>
-        <append>false</append>
         <encoder>
             <pattern>%-5p: %d{ISO8601} [%t] %m%n</pattern>
         </encoder>
