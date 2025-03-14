@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <timestamp key="timestamp" datePattern="yyyyMMdd'T'HHmmss" />
+    <timestamp key="timestamp" datePattern="yyyyMMdd'T'HHmmss"/>
     <appender name="file" class="ch.qos.logback.core.FileAppender">
         <file>${HOME}/.todo/logs/log.${timestamp}.txt</file>
         <append>false</append>
