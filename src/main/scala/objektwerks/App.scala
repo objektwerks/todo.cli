@@ -30,16 +30,20 @@ object App extends LazyLogging:
     store.writeTodo(completedTodo)
     log(s"completed --id: $completedTodo")
 
+  @main(doc = "Help menu.")
+  def help(): Unit =
+    menu()
+
   def main(args: Array[String]): Unit =
     if args.isEmpty then menu()
     else ParserForMethods(this).runOrExit(args)
 
   private def menu(): Unit =
     log("menu:")
-    log("1. list --filter all | completed | incomplete")
-    log("2. add --todo")
-    log("3. complete --id")
-    log("*** To view app menu, invoke app with no command.")
+    log("1. help")
+    log("2. list --filter all | completed | incomplete")
+    log("3. add --todo")
+    log("4. complete --id")
 
   private def log(message: String): Unit =
     println(message)
