@@ -15,6 +15,7 @@ object App extends LazyLogging:
       case Filter.all => list(todos)
       case Filter.completed => list( todos.filter(todo => todo.completed.nonEmpty) )
       case Filter.incomplete => list( todos.filter(todo => todo.completed.isEmpty) )
+      case _ => log("list --filter all | completed | incomplete")
 
   @main
   def add( @arg(doc = "Add todo.") todo: String* ): Unit =
@@ -35,7 +36,7 @@ object App extends LazyLogging:
 
   private def menu(): Unit =
     log("menu:")
-    log("1. list --filter all | completed | incomplete`")
+    log("1. list --filter all | completed | incomplete")
     log("2. add --todo")
     log("3. complete --id")
 
