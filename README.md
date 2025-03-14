@@ -19,7 +19,7 @@ Commands
 1. list --filter
 2. add --todo
 3. complete --id
->The command ```list --filter``` accepts ```all``` ( the default ), ```completed``` and ```incomplete```
+>The command ```list --filter``` accepts ```all```, ```completed``` and ```incomplete```
 * ```list --filter all | completed | incomplete```
 >Since the ```list``` default is: ```--filter all```, this also works:
 * ```list```
