@@ -8,13 +8,13 @@ object App extends LazyLogging:
   val store = Store()
 
   @main
-  def list( @arg(doc = "List todos by state [all, completed, incomplete]") state: String = State.all ): Unit =
-    log(s"list by state: $state")
+  def list( @arg(doc = "List todos by filter [all, completed, incomplete]") filter: String = Filter.all ): Unit =
+    log(s"list by filter: $filter")
     val todos = store.listTodos()
-    state match
-      case State.all => todos.foreach(println)
-      case State.completed => todos.filter(todo => todo.completed.nonEmpty).foreach(println)
-      case State.incomplete => todos.filter(todo => todo.completed.isEmpty).foreach(println)
+    filter match
+      case Filter.all => todos.foreach(println)
+      case Filter.completed => todos.filter(todo => todo.completed.nonEmpty).foreach(println)
+      case Filter.incomplete => todos.filter(todo => todo.completed.isEmpty).foreach(println)
 
   @main
   def add( @arg(doc = "Add todo.") todo: String* ): Unit =

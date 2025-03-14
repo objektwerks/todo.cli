@@ -4,7 +4,7 @@ import java.time.Instant
 
 import upickle.default.ReadWriter as JsonSupport
 
-object State:
+object Filter:
   val all = "all"
   val completed = "completed"
   val incomplete = "incomplete"
