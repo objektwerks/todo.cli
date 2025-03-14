@@ -24,13 +24,13 @@ object App extends LazyLogging:
     log(s"add --todo: $newTodo")
 
   @main
-  def complete( @arg id: Int): Unit =
+  def complete( @arg id: Int ): Unit =
     val todo = store.readTodo(s"$id.json")
     val completedTodo = todo.copy(completed = Todo.datetime())
     store.writeTodo(completedTodo)
     log(s"completed --id: $completedTodo")
 
-  @main(doc = "Help menu.")
+  @main
   def help(): Unit =
     menu()
 
