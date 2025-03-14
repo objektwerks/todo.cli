@@ -12,9 +12,9 @@ object App extends LazyLogging:
     log(s"list by filter: $filter")
     val todos = store.listTodos()
     filter match
-      case Filter.all => todos.foreach(println)
-      case Filter.completed => todos.filter(todo => todo.completed.nonEmpty).foreach(println)
-      case Filter.incomplete => todos.filter(todo => todo.completed.isEmpty).foreach(println)
+      case Filter.all => list(todos)
+      case Filter.completed => list( todos.filter(todo => todo.completed.nonEmpty) )
+      case Filter.incomplete => list( todos.filter(todo => todo.completed.isEmpty) )
 
   @main
   def add( @arg(doc = "Add todo.") todo: String* ): Unit =
@@ -42,3 +42,6 @@ object App extends LazyLogging:
   private def log(message: String): Unit =
     println(message)
     logger.info(message)
+
+  private def list(todos: List[Todo]): Unit =
+    todos.zip(Stream.from(1)).foreach { case (todo, index) => println(s"$index. $todo") }
