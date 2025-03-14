@@ -26,20 +26,17 @@ Commands
 
 Run
 ---
-1. ```sbt "run help"```
 1. ```sbt "run list --filter all"```
 2. ```sbt "run add --todo drink beer"```
 3. ```sbt "run complete --id 1"```
->To view the app menu:
-1. sbt run
+4. ```sbt "run help"```
 
 Execute
 -------
-1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar --filter all```
+1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar list --filter all```
 2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar add --todo drink beer```
 3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar complete --id 1```
->To view the app menu:
-1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar```
+4. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar help```
 
 Resources
 ---------
