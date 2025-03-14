@@ -10,23 +10,25 @@ Test
 ----
 1. ```sbt clean test```
 
-Run
----
-1. ```sbt "run list"```
-
 Assembly
 --------
 1. ```sbt clean test assembly```
 
 Commands
 --------
-1. list --filter : ```sbt "run list --filter all"```
-2. add --todo : ```sbt "run add --todo drink beer"```
-3. complete --id : ```sbt "run complete --id 1"```
+1. list --filter
+2. add --todo
+3. complete --id
 >The command ```list --filter``` accepts ```all``` ( the default ), ```completed``` and ```incomplete```
 * ```list --filter all | completed | incomplete```
->Since the default is: ```--filter all```, this also works:
+>Since the ```list``` default is: ```--filter all```, this also works:
 * ```list```
+
+Sbt Run
+-------
+1. ```sbt "run list --filter all"```
+2. ```sbt "run add --todo drink beer"```
+3. ```sbt "run complete --id 1"```
 
 Execute
 -------
