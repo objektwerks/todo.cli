@@ -18,6 +18,7 @@ final class Store extends LazyLogging:
       .filter { path => path.baseName.nonEmpty }
       .map { path => readTodo(s"${path.baseName}.json") }
       .toList
+      .sorted
 
   def readTodo(file: String): Todo =
     val todoAsJson = os.read(todosPath / file)
