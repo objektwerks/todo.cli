@@ -46,4 +46,6 @@ object App extends LazyLogging:
     logger.info(message)
 
   private def list(todos: List[Todo]): Unit =
-    todos.zip(Stream.from(1)).foreach { case (todo, index) => println(s"$index. $todo") }
+    todos
+      .zip( Stream.from(1) )
+      .foreach { case (todo, index) => println(s"$index. $todo") }
