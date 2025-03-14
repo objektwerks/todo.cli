@@ -30,12 +30,14 @@ object App extends LazyLogging:
     log(s"completed --id: $completedTodo")
 
   def main(args: Array[String]): Unit =
-    if args.isEmpty then
-      log("menu:")
-      log("list --filter all | completed | incomplete`")
-      log("add --todo")
-      log("complete --id")
+    if args.isEmpty then menu()
     else ParserForMethods(this).runOrExit(args)
+
+  private def menu(): Unit =
+    log("menu:")
+    log("list --filter all | completed | incomplete`")
+    log("add --todo")
+    log("complete --id")
 
   private def log(message: String): Unit =
     println(message)
