@@ -34,11 +34,11 @@ Run
 
 Execute
 -------
-1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.4-SNAPSHOT.jar list --filter all```
-2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.4-SNAPSHOT.jar add --todo drink beer```
-3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.4-SNAPSHOT.jar complete --id 1```
+1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar list --filter all```
+2. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar add --todo drink beer```
+3. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar complete --id 1```
 >To view the app menu:
-1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.4-SNAPSHOT.jar```
+1. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.5-SNAPSHOT.jar```
 
 Resources
 ---------
