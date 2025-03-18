@@ -52,7 +52,7 @@ Logging
 -------
 >**Log** files are stored here:
 ```
-~/.todo/logs
+~/.todo/log
 ```
 
 Resources
