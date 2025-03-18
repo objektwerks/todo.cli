@@ -41,6 +41,20 @@ Execute
 4. ```java -jar target/scala-3.7.0-RC1/todo-cli-0.8-SNAPSHOT.jar help```
 >```java -jar target/scala-3.7.0-RC1/todo-cli-0.8-SNAPSHOT.jar``` displays the help menu.
 
+Persistence
+-----------
+>**Todos** are stored as json files here:
+```
+~/.todo/data
+```
+
+Logging
+-------
+>**Log** files are stored here:
+```
+~/.todo/logs
+```
+
 Resources
 ---------
 * [MainArgs Github](https://github.com/com-lihaoyi/mainargs?tab=readme-ov-file#varargs-parameters)
