@@ -59,3 +59,4 @@ Resources
 ---------
 * [MainArgs Github](https://github.com/com-lihaoyi/mainargs?tab=readme-ov-file#varargs-parameters)
 * [Os-Lib Github](https://github.com/com-lihaoyi/os-lib)
+* [uPickle Github](https://github.com/com-lihaoyi/upickle)
