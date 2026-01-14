@@ -1,7 +1,7 @@
 name := "todo.cli"
 organization := "objektwerks"
 version := "0.8-SNAPSHOT"
-scalaVersion := "3.8.0-RC5"
+scalaVersion := "3.8.0-RC6"
 libraryDependencies ++= Seq(
   "com.lihaoyi" %% "mainargs" % "0.7.8",
   "com.lihaoyi" %% "os-lib" % "0.11.6-M1",
