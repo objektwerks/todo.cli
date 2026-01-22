@@ -7,7 +7,7 @@ libraryDependencies ++= Seq(
   "com.lihaoyi" %% "os-lib" % "0.11.6-M1",
   "com.lihaoyi" %% "upickle" % "4.4.2",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
-  "ch.qos.logback" % "logback-classic" % "1.5.24",
+  "ch.qos.logback" % "logback-classic" % "1.5.25",
   "org.scalatest" %% "scalatest" % "3.2.19" % Test
 )
 scalacOptions ++= Seq(
